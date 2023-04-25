@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 #include<alloc.h>
-void addPolynomial();
+
 
 typedef struct node{
 int coeff;
@@ -11,12 +11,12 @@ struct node *next;
 
 void main(){
 node *poly1,*poly2,*poly3;
-//int poly1,poly2,poly3;
+
 int choice,element,after,before;
 void readPolynomial(node **);
 void printPolynomial(node *);
 void addPolynomial(node *, node *,node**);
-void addNode(node **,float, int);
+void addNode(node **,int, int);
 poly1=poly2=poly3=NULL;
 clrscr();
 printf("Enter first polynomial\n");
@@ -79,7 +79,7 @@ void printPplynomial(node *ptr){
   printf("%dx^%d",ptr->coeff,ptr->power);
  }
 }
-void addPolynomial(node *ptr1,node *ptr2,node *ptr3)
+void addPolynomial(node *ptr1,node *ptr2,node **ptr3)
 {
 int powe;
 float coef;
